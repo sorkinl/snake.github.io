@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="snakecss.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <canvas class="background"></canvas>
+    <!-- <div id="score">0</div> -->
+    <div id="intro" class="intro">
+      <h1>Welcome to WebSocket Snake Game</h1>
+      <button onclick="startGame()" class="intro-btn">Play</button>
+    </div>
+    <div style="display: none" id="game">
+      <div>
+        <p>Your score: <span id="score">0</span></p>
+        <p>Opponents score: <span id="score1">0</span></p>
+      </div>
+      <canvas id="snakeboard" width="400" height="400"></canvas>
+    </div>
+    <div style="display: none" id="end">
+      <h1>You <span id="result"></span></h1>
+    </div>
+
+    <style>
+      #snakeboard {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+      }
+    </style>
+    <script src="particles.js-master/dist/particles.min.js"></script>
+  </body>
+
+  <script src="snake.js"></script>
+</html>

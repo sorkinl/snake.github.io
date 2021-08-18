@@ -8,7 +8,7 @@ function startGame() {
   const intro = document.getElementById("intro");
   intro.innerHTML = "<p>Waiting for your friend to join...</p>";
   let ip_port = "18.216.124.217:8080";
-  let socket = new WebSocket(`wss://${ip_port}`);
+  let socket = new WebSocket(`ws://${ip_port}`);
   window.onbeforeunload = function () {
     websocket.onclose = function () {}; // disable onclose handler first
     socket.close();
